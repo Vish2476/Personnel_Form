@@ -1,0 +1,332 @@
+
+<html>
+<head>
+	<title>Application Form</title>
+<style>
+body{
+	padding: 20px;
+
+}
+.container{
+	border-radius: 35px;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 5px;
+	width: 60%;
+	font-family: rockwell;
+	padding: 20px;
+	background-color: cyan;
+	border-style: solid;
+  	border-color: red;
+  	-webkit-box-shadow: 17px 15px 13px 14px rgba(0,0,0,0.85);
+	-moz-box-shadow: 17px 15px 13px 14px rgba(0,0,0,0.85);
+	box-shadow: 17px 15px 13px 14px rgba(0,0,0,0.85);
+
+}
+form{
+	padding: 10px;
+	color: red;
+	align-items: justify;
+}
+.title{
+	text-align: center;
+	font-size: 24px;
+	color: black;
+}
+label{
+	padding: 10px;
+}
+input{
+	padding: 10px;
+	width: auto;
+	height: 5%;
+	margin: 10px;
+}
+.input1{
+	padding: 10px;
+	width: 100%;
+	border-radius: 15px;
+	box-shadow: 0px 0px 2px 2px blue;
+	height: 5%;
+	margin: 10px;
+
+}
+.input2{
+	padding: 20px;
+	border-radius: 20px;
+}
+select{
+	/*width: 110px;
+	height:20px;*/
+	font-size: 20px;
+	padding: 5px;
+	margin: 20px;
+}
+.btn{
+	font-size: 25px;
+	text-align: center;
+	margin: 20px;
+}
+.input3{
+	width:50%;
+}
+fieldset{
+	margin: 20px;
+	padding: 30px;
+	border-radius: 15px;
+
+}
+legend{
+	font-size: 24px;
+}
+.chk{
+	width: 16px;
+	height: 16px;
+}
+.center{
+	height: 100%;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.logo{
+	height: 60px;
+	width: 60px;
+}
+.h11{
+	color: darkblue;
+	padding: 20px;
+	text-align:center;
+}
+</style>
+
+</head>
+
+<body style="background: linear-gradient(#e66465, #9198e5);">
+	<div>
+	<h1 class="h11"><img src="1.png" class="logo">&nbsp;<span style="font-size:200%;" > Presidency University,Bangalore</span></h1>
+	</div>
+	<h2 style="text-align: center;">Job Fair Application Form</h2>
+<div class="container">
+<div class="title">
+Registration Form
+</div>
+
+<form id="myform">
+<div class="form">
+<fieldset>
+	<legend>Personnel Details</legend>
+<div class="input_field">
+<label>First Name</label>
+<input type="text" class="input1" id="fname" placeholder="First Name Only" required>
+</div>
+
+<div class="input_field">
+<label>Last Name</label>
+<input type="text" class="input1" id="lname" placeholder="Last Name Only">
+</div>
+<div >
+	<label>Email-ID</label>
+		    <input type="email" id="email" placeholder="Enter valid email ID" size="30" class="input1">
+		    </div>
+
+<div class="input_field">
+<label>Age</label>
+<input type="text" class="input1" placeholder="Enter the Age" id="Ag">
+</div>
+
+<div class="input_field">
+<label>Gender</label>
+<div class="custom_select">
+<select>
+<option value="">Select</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+</div>
+</div>
+
+<div class="input_field">
+<label>Phone Number</label>
+<input type="text" class="input1" id="phno" placeholder="Enter only Number without the country code">
+</div>
+
+<div class="input_field">
+<label>Address</label>
+<textarea  rows="4" style="width: 100%;padding:10px;margin: 10px;"></textarea>
+</div>
+</fieldset>
+<div>
+<fieldset>
+	<legend>Upload Section</legend>
+
+<p style="text-align: justify;"><span>Choose Resume to upload&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<input type="file" id="real-file" class="input3"><br>
+<span>Choose Picture to upload&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<input type="file" id="real-file" class="input3"><br>
+<span>Choose Signature to upload&nbsp;</span>
+<input type="file" id="real-file" class="input3"></p>
+</div>
+<div class="input_field" >
+<fieldset>
+	<legend>Marks Section</legend>
+C.G.P.A : <input type="checkbox" id="myCheck"  onclick="myFunction()" class="chk">
+Percentage: <input type="checkbox" id="myCheck1"  onclick="myFunction1()" class="chk">
+<center>
+<p id="text" style="display:none;text-align: center;">Do Enter Only  A || B || C Grades only as You Have Selected the CGPA</p>
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}</script>
+<p id="text1" style="display:none;">Do Enter Only  two Numeric Values for the Percentage </p>
+</center>
+<script type="text/javascript">	
+function myFunction1() {
+  var checkBox = document.getElementById("myCheck1");
+  var text = document.getElementById("text1");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+<!--input type="checkbox" id="per" value="per" class="input2">
+<label for="per">&nbsp;Percentage</label>
+<input type="checkbox"  id="cgpa" value="cgpa" class="input2">
+<label for="cgpa">&nbsp;CGPA</label-->
+</div>
+
+<div>
+<label>SSLC</label><input type="text" id="ss" maxlength="3" pattern="[1-99]{2}.[1-9]{2}.[A-Ca-c]{1}">
+<label>&emsp;PUC</label><input type="text" id="pu" maxlength="3" pattern="[1-99]{2}.[1-9]{2}.[A-Ca-c]{1}">
+<label >&emsp;DEGREE</label><input type="text" id="de" maxlength="3" pattern="[1-99]{2}.[1-9]{2}.[A-Ca-c]{1}">
+</div>
+</fieldset>
+<fieldset>
+	<legend>Specialization</legend>
+<div>
+	<label>Specialization</label>
+<select>
+<option value="">Select</option>
+<option value="CSE">CSE</option>
+<option value="IT">IT</option>
+<option value="ECE">ECE</option>
+<option value="EEE">EEE</option>
+<option value="CIVIL">CIVIL</option>
+<option value="MECHANICAL">MECHANICAL</option>
+</select>
+</div>
+</div>
+<fieldset>
+<legend>YOP AND DOB  </legend>
+<label>Year of Passing</label>
+<input type="number" placeholder="YYYY" class="input" id="yop" required>
+<label>DOB</label>
+<input type="date" class="input">
+</fieldset>
+<fieldset>
+<legend>Technical Skills</legend>
+<div>
+	<label>Skills:</label><br>
+<div class="check_box">
+<input type="checkbox" id="spl" style="width:20px;height:15px;">&nbsp;C/C++</input>&emsp;
+<input type="checkbox" id="spl1" style="width:20px;height:15px;">&nbsp;Java</input>&emsp;
+<input type="checkbox" id="spl2" style="width:20px;height:15px;">&nbsp;DBMS</input>&emsp;
+<input type="checkbox" id="spl3" style="width:20px;height:15px;">&nbsp;CCNA Testing</input>
+</div>
+</div></fieldset>
+<div style="text-align: center;margin: 30px;">
+	<span id="message" style="background-color: yellow;color: red;text-align: center;"></span>
+</div>
+<div class="input_field" style="text-align: center;">
+<button type="reset" onclick="res()" class="btn">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" onclick="validation()" class="btn">Submit</button>
+</div>
+<script type="text/javascript">
+function validation(){
+var a=document.getElementById('phno').value;
+var b=document.getElementById('spl').checked;
+var b1=document.getElementById('spl1').checked;
+var b2=document.getElementById('spl2').checked;
+var b3=document.getElementById('spl3').checked;
+var c=document.getElementById('fname').value;
+var d=document.getElementById('lname').value;
+var Ag=document.getElementById('Ag');
+var yop=document.getElementById('yop');
+/*var rd1=document.getElementById("per");
+var rd2=document.getElementById("cgpa");
+var ss=document.getElementById('ss').value;
+var pu=document.getElementById('pu').value;
+var de=document.getElementById('de').value;*/
+
+message.style.padding="10px";
+
+if ((a=="")||(isNaN(a))||(a.length<10)||(a.length>10)){
+document.getElementById("message").innerHTML="Please fill Phone number";
+alert("Do Enter a Number of 10digits");
+return false;
+}
+if(!yop.checkValidity()){
+alert("NOT ELIGIBLE TO REGISTER!!...year of passing should be between 2020 to 2022");
+document.getElementById("message").innerHTML="enter year of passing between 2020 to 2022";
+return false;
+}
+if((b=="")&&(b1=="")&&(b2=="")&&(b3==""))
+{
+document.getElementById("message").innerHTML="select One Technical Skill Atleast ";
+alert("Select One Technical Skill Atleast ")
+return false;
+}
+if(c==""){
+	alert("Do enter the First Name ")
+}
+if(d==""){
+	alert("Do enter the Last Name ")
+}
+if ((Ag=="")||(Ag>80)||(Ag<19)) {
+	alert("Do Enter the Age between 20 & 80 to be ELIGIBLE")
+}
+else{
+alert("Form is submitted Successfully!");
+}
+}
+
+/*
+function get1(){
+var rd1=document.getElementById("per");
+var rd2=document.getElementById("cgpa");
+var ss=document.getElementById('ss').value;
+var pu=document.getElementById('pu').value;
+var de=document.getElementById('de').value;
+
+if(rd1.checked==true){
+if(ss.length<3 && pu.length<3 && de.length<3)
+document.getElementById("message").innerHTML="";
+else
+document.getElementById("message").innerHTML="*Percentage should in two digits";
+return false;}
+
+if(rd2.checked==true){
+if(isNaN(ss) && isNaN(pu) && isNaN(de)){
+if(ss.length<2 && pu.length<2 && de.length<2)
+document.getElementById("message").innerHTML="";
+else
+document.getElementById("message").innerHTML="*CGPA should be in grades";
+return false;}
+else
+document.getElementById("message").innerHTML="*CGPA should be in grades";}
+}*/
+</script>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
